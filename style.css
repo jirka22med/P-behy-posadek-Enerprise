@@ -1,0 +1,225 @@
+body {
+            background-color: #000;
+            color: goldenrod;
+            font-family: Consolas, monaco, monospace;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 23px;
+        }
+
+        h1 {
+            color: #FFD700;
+            text-shadow: 0 0 10px #FFD700, 0 0 20px #FF8C00, 0 0 30px #FF4500;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        /* Kontejner pro kapitoly */
+        .kapitoly-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 0 15px;
+        }
+
+        /* Styl pro řádek kapitol */
+        .kapitoly-radek {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        /* Styl pro nadpis řádku */
+        .radek-nazev {
+            width: 100%;
+            text-align: left;
+            margin-bottom: 5px;
+            color: #00FF7F;
+            font-weight: bold;
+            text-shadow: 0 0 5px #00FF7F;
+            text-align: center;
+        }
+
+        /* Kombinace tvých stylů pro tlačítka s mým návrhem pro úspornější rozložení */
+        .button {
+            background-color: green;
+            color: white;
+            border: 2px solid #00FF00;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            min-width: 40px;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .button:hover {
+            background-color: #00FF00;
+            color: black;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #1E90FF, 0 0 30px #00BFFF;
+        }
+
+        .button.active {
+            background-color: red;
+            color: white;
+            border-color: #FFD700;
+            box-shadow: 0 0 10px #FFD700, 0 0 20px #FF8C00;
+        }
+
+        .chapter {
+            display: none;
+            max-width: 1200px;
+            padding: 20px;
+            background-color: #222;
+            box-shadow: 0 0 20px #FFD700;
+            margin-top: 20px;
+        }
+
+        .chapter.active {
+            display: block;
+        }
+
+        footer {
+            margin-top: 30px;
+            color: #00FF7F;
+            text-align: center;
+            padding: 20px 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 -2px 10px rgba(255, 215, 0, 0.5);
+            font-size: 14px;
+            border-radius: 5px;
+            letter-spacing: 0.2px;
+            width: 100%;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #1E90FF;
+            text-decoration: underline;
+        }
+
+        /* Media query pro menší obrazovky */
+        @media (max-width: 768px) {
+            body {
+                font-size: 18px;
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .button {
+                padding: 4px 8px;
+                font-size: 14px;
+                min-width: 35px;
+                margin: 2px;
+            }
+
+            .chapter {
+                padding: 15px;
+            }
+
+            footer {
+                font-size: 12px;
+            }
+        }
+        /* Přímé centrování ovládacích prvků */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  margin: 20px auto; /* Centrování pomocí auto margins */
+  background-color: rgba(0, 0, 50, 0.7);
+  border-radius: 10px;
+  border: 2px solid #00A8FF;
+  box-shadow: 0 0 15px #00A8FF, inset 0 0 10px rgba(0, 168, 255, 0.3);
+  max-width: 600px;
+  width: fit-content; /* Šířka dle obsahu */
+}
+
+/* Základní styl pro všechna tlačítka */
+.controls button {
+  background: linear-gradient(to bottom, #003366, #001933);
+  color: #00FFFF;
+  border: 1px solid #00A8FF;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.7);
+  box-shadow: 0 0 8px rgba(0, 168, 255, 0.5);
+  min-width: 120px;
+  margin: 0; /* Reset margin */
+}
+
+/* Styl pro tlačítko při najetí myší */
+.controls button:hover {
+  background: linear-gradient(to bottom, #0066CC, #004C99);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(0, 168, 255, 0.8);
+}
+
+/* Styl pro aktivní tlačítko (když je stisknuté) */
+.controls button:active {
+  transform: translateY(1px);
+  box-shadow: 0 0 5px rgba(0, 168, 255, 0.6);
+}
+
+/* Specifické styly pro jednotlivá tlačítka */
+.character-btn {
+  background: linear-gradient(to bottom, #4B0082, #2E0854) !important;
+  border-color: #9370DB !important;
+}
+
+.play-btn {
+  background: linear-gradient(to bottom, #006400, #004D00) !important;
+  border-color: #00FF00 !important;
+}
+
+.pause-btn {
+  background: linear-gradient(to bottom, #8B4500, #663300) !important;
+  border-color: #FFA500 !important;
+}
+
+.stop-btn {
+  background: linear-gradient(to bottom, #8B0000, #660000) !important;
+  border-color: #FF0000 !important;
+}
+
+/* Media query pro menší obrazovky */
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    width: 90%; /* Na mobilech zabere 90% šířky */
+    max-width: 300px;
+  }
+  
+  .controls button {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+  }
+}
